@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Compact Media | Growth, engineered.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080D1B;--bg2:#10182A;--blue:#155EEF;--ele:#62A0FF;--w:#F5F7FB;--mu:#9AA7BD;--bd:#1f2b45;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--w);font-family:Manrope,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-weight:800;line-height:.98;letter-spacing:-.03em;margin:0}
+h1{font-size:clamp(2.6rem,9vw,7.5rem)}h2{font-size:clamp(2rem,6vw,4.6rem)}
+p{color:var(--mu);max-width:56ch}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+section{padding:clamp(70px,10vw,140px) 0}
+:focus-visible{outline:2px solid var(--ele);outline-offset:3px}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;transition:.3s}
+nav.s{background:rgba(8,13,27,.92);border-bottom:1px solid var(--bd)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.02em}.logo i{font-style:normal;color:var(--ele)}
+.links{display:flex;gap:26px;align-items:center;font-size:.9rem}
+.links a:not(.btn){color:var(--mu);transition:.2s}.links a.on,.links a:hover{color:var(--w)}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:13px 22px;border-radius:999px;font-weight:700;font-size:.85rem;border:0;cursor:pointer;transition:.25s;font-family:inherit}
+.btn:hover{background:var(--ele);color:var(--bg);transform:translateY(-2px)}
+.btn.ghost{background:none;border:1px solid var(--bd);color:var(--w)}.btn.ghost:hover{border-color:var(--ele);background:none;color:var(--ele)}
+.burger{display:none;background:none;border:1px solid var(--bd);color:#fff;border-radius:8px;padding:8px 12px;font-family:inherit}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:110px;background:radial-gradient(800px 500px at 80% 30%,rgba(21,94,239,.35),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;position:relative}
+.eyebrow{color:var(--ele);font-size:.8rem;font-weight:700;letter-spacing:.12em;margin-bottom:22px}
+.hero p{margin:28px 0 34px;font-size:1.1rem}.row{display:flex;gap:12px;flex-wrap:wrap}
+.vis{position:relative;aspect-ratio:3/4;max-height:560px}
+.vis div{position:absolute;border-radius:22px;border:1px solid var(--bd)}
+.v1{inset:0 12% 18% 0;background:linear-gradient(160deg,var(--blue),#0a1f5c 70%);animation:fl 7s ease-in-out infinite}
+.v2{inset:30% 0 0 35%;background:var(--bg2);display:flex;align-items:flex-end;padding:18px;font-size:.8rem;color:var(--mu);animation:fl 9s ease-in-out infinite reverse}
+.v3{left:-6%;top:62%;width:42%;aspect-ratio:1;border-radius:50%!important;background:radial-gradient(circle at 30% 30%,var(--ele),var(--blue) 60%,#0a1f5c);border:0!important;filter:blur(.5px)}
+.v1::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 40px),repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 1px,transparent 1px 40px);border-radius:22px}
+@keyframes fl{50%{transform:translateY(-14px)}}
+.scroll{position:absolute;bottom:26px;left:50%;color:var(--mu);font-size:.75rem}
+.intro{border-top:1px solid var(--bd)}.intro .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:end}
+.light{background:var(--w);color:var(--bg)}.light p{color:#4a5670}
+.svc{border-top:1px solid var(--bd);margin-top:50px}
+.svc button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:grid;grid-template-columns:60px 1fr auto;gap:16px;align-items:center;padding:26px 0;border-bottom:1px solid var(--bd);transition:.3s}
+.svc button:hover{padding-left:16px;color:var(--ele)}.svc button:focus-visible{outline:2px solid var(--ele)}
+.svc b{font-size:clamp(1.3rem,3.4vw,2.4rem);letter-spacing:-.02em}.svc small{color:var(--mu)}.svc em{font-style:normal;font-size:1.6rem;transition:.3s}
+.svc .d{display:none;padding:0 0 26px 76px;border-bottom:1px solid var(--bd)}.svc .o+.d{display:block}.svc .o em{transform:rotate(45deg)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0}
+.filters button{background:none;border:1px solid var(--bd);color:var(--mu);padding:9px 18px;border-radius:999px;cursor:pointer;font-family:inherit;font-weight:600}
+.filters button.on{background:var(--w);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+.pj{position:relative;overflow:hidden;border-radius:18px;min-height:300px;display:flex;align-items:flex-end;padding:22px;grid-column:span 4;border:1px solid var(--bd)}
+.pj:nth-child(1){grid-column:span 7;min-height:440px}.pj:nth-child(2){grid-column:span 5}
+.pj:nth-child(3){grid-column:span 5}.pj:nth-child(4){grid-column:span 7;min-height:380px}
+.pj::before{content:"";position:absolute;inset:0;background:var(--g);transition:transform .7s}.pj:hover::before{transform:scale(1.08)}
+.pj::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(8,13,27,.85))}
+.pj>*{position:relative;z-index:1}.pj h3{font-size:1.6rem}.tag{font-size:.75rem;color:var(--ele);font-weight:700}
+.demo{position:absolute!important;top:16px;right:16px;background:rgba(0,0,0,.5);padding:3px 10px;border-radius:999px;font-size:.7rem;font-weight:700}
+.ph{border:1px dashed #b9c4dc;border-radius:18px;padding:clamp(28px,5vw,60px);margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.ph h3{font-size:1.6rem;margin-bottom:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.pic{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(150deg,var(--bg2),#0a1f5c);border:1px solid var(--bd);display:flex;align-items:flex-end;padding:24px;position:relative;overflow:hidden}
+.pic::before{content:"HA";position:absolute;right:-4%;top:-8%;font-size:16rem;font-weight:800;color:rgba(98,160,255,.12);line-height:1}
+.why{display:grid;grid-template-columns:repeat(3,1fr);margin-top:50px;border-top:1px solid var(--bd);border-left:1px solid var(--bd)}
+.why div{padding:30px;border-right:1px solid var(--bd);border-bottom:1px solid var(--bd)}.why h3{font-size:1.25rem;letter-spacing:-.01em;margin-bottom:10px}
+.why div::before{content:"";display:block;width:10px;height:10px;background:var(--ele);margin-bottom:22px;border-radius:2px}
+.rev{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;margin-top:44px}
+.q{background:var(--bg2);border:1px solid var(--bd);border-radius:18px;padding:30px;position:relative}
+.q.big{grid-row:span 2;background:var(--blue);border:0;display:flex;flex-direction:column;justify-content:space-between}.q.big p{color:#fff;font-size:clamp(1.3rem,2.6vw,2rem);font-weight:700;line-height:1.3;letter-spacing:-.01em;max-width:none}
+.q p{margin:12px 0 18px;color:var(--w)}.st{color:#ffc857;letter-spacing:3px}.q small{color:var(--mu)}.q.big small{color:#d6e4ff}
+.q .demo{top:14px}
+.q,.pj{cursor:pointer}.q:hover{border-color:var(--ele)}.q .more{display:block;margin-top:14px;font-size:.8rem;font-weight:700;color:var(--ele)}.q.big .more{color:#fff}
+#det{width:min(760px,94vw);max-height:90vh;overflow:auto}#det h3{font-size:2rem;margin:8px 0 18px}#det h4{margin:22px 0 6px;font-size:.95rem;color:var(--ele)}#det p{margin:0;max-width:none}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}.gal i{aspect-ratio:4/3;border-radius:10px;border:1px solid var(--bd)}.x{float:right}
+.cta{background:radial-gradient(700px 400px at 50% 100%,rgba(21,94,239,.5),transparent 70%),var(--bg);text-align:center;border-top:1px solid var(--bd)}.cta p{margin:24px auto 34px}.cta .row{justify-content:center}
+form{display:grid;gap:14px}.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,select,textarea{width:100%;background:var(--bg2);border:1px solid var(--bd);color:var(--w);padding:14px;border-radius:10px;font:inherit}
+input:focus,select:focus,textarea:focus{border-color:var(--ele);outline:0}
+.msg{padding:14px;border-radius:10px;font-size:.9rem;display:none}.msg.ok{display:block;background:#0c2a1f;color:#7ee2b0}.msg.er{display:block;background:#33141a;color:#ff9aa8}
+.chk{display:flex;gap:10px;font-size:.85rem;color:var(--mu)}.chk input{width:auto;margin-top:4px}
+dialog{background:var(--bg);color:var(--w);border:1px solid var(--bd);border-radius:18px;padding:30px;width:min(560px,92vw)}dialog::backdrop{background:rgba(0,0,0,.7)}
+.stars button{background:none;border:0;font-size:2rem;color:#3a465f;cursor:pointer;padding:0 2px}.stars button.on{color:#ffc857}
+footer{border-top:1px solid var(--bd);padding:60px 0 30px}footer .wrap>div{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer a{display:block;color:var(--mu);padding:3px 0}footer a:hover{color:var(--w)}
+.big{font-size:clamp(3rem,15vw,12rem);font-weight:800;letter-spacing:-.05em;line-height:.9;color:#111b33;margin-top:50px;user-select:none}
+.rv{opacity:0;transform:translateY(24px);transition:1s}.rv.in{opacity:1;transform:none}
+@media(max-width:860px){.links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;padding:24px;border-bottom:1px solid var(--bd)}.links.open{display:flex}.burger{display:block}
+.hero .wrap,.intro .wrap,.two,.ph,.rev,.f2,footer .wrap>div{grid-template-columns:1fr}.vis{max-height:340px;aspect-ratio:16/11}.why{grid-template-columns:1fr}
+.pj,.pj:nth-child(n){grid-column:span 12;min-height:280px}.svc button{grid-template-columns:36px 1fr auto}.svc small{display:none}.svc .d{padding-left:52px}.q.big{grid-row:auto}.scroll{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style></head><body>
+<nav id="nav"><div class="wrap"><a href="#home" class="logo">Compact<i>Media</i></a>
+<button class="burger" id="bg" aria-label="Menu" aria-expanded="false">Menu</button>
+<div class="links" id="lk"><a href="#home" class="on">Home</a><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="#reviews">Reviews</a><a class="btn" href="#contact">Let’s Talk ↗</a></div></div></nav>
+
+<header class="hero" id="home"><div class="wrap"><div>
+<div class="eyebrow">Creative studio and digital growth agency</div>
+<h1>We build<br>brands that<br>move forward.</h1>
+<p>Strategy, creativity and performance. We help businesses build a stronger digital presence and turn attention into growth.</p>
+<div class="row"><a class="btn" href="#contact">Let’s build something</a><a class="btn ghost" href="#work">Explore our work</a></div></div>
+<div class="vis" aria-hidden="true"><div class="v1"></div><div class="v2">Growth, engineered.</div><div class="v3"></div></div></div>
+<div class="scroll">Scroll ↓</div></header>
+
+<section class="intro"><div class="wrap"><h2 class="rv">We don’t just make content.<br>We create momentum.</h2>
+<p class="rv">We bring creative thinking, digital strategy, and performance-focused execution together to help brands stand out and grow.</p></div></section>
+
+<section id="services" style="background:var(--bg2)"><div class="wrap"><h2>What we bring<br>to the table.</h2>
+<div class="svc" id="sv"></div><p style="margin-top:40px"><a class="btn" href="#contact">Start a project</a></p></div></section>
+
+<section id="work"><div class="wrap"><h2>Selected work.<br>Real ambition.</h2>
+<p style="margin-top:20px">Cards below are DEMO placeholders. Real projects will appear here once published.</p>
+<div class="filters" id="fl"></div><div class="grid" id="gr"></div></div></section>
+
+<section class="light"><div class="wrap"><h2>Creative work.<br>Measurable impact.</h2>
+<div class="ph"><div><h3>Performance-led, always.</h3><p>Every campaign starts with a goal and ends with a report. Quality leads at a low cost beat vanity numbers, so we track what matters to your business.</p></div>
+<div><h3>Case studies coming soon.</h3><p>Verified results, screenshots and campaign reports will be added here by Compact Media. We never publish numbers we can’t back up.</p></div></div></div></section>
+
+<section id="about"><div class="wrap two"><div><h2>Small details.<br>Big picture.</h2>
+<p style="margin:26px 0">Compact Media believes every brand has a unique story. We combine creativity, strategy, and digital execution to help businesses communicate better, reach their audience, and build meaningful growth.</p>
+<p>Our approach pairs strategy with creative execution and works as a true client partnership, with transparent updates at every step.</p>
+<p style="margin-top:26px"><a class="btn ghost" href="https://www.instagram.com/harshanand__/" target="_blank" rel="noopener">Follow Harsh on Instagram ↗</a></p></div>
+<div class="pic"><div><b style="font-size:1.6rem">Harsh Anand</b><br><span style="color:var(--mu)">Owner, Compact Media</span></div></div></div></section>
+
+<section style="background:var(--bg2)"><div class="wrap"><h2>Why brands<br>work with us.</h2><div class="why">
+<div><h3>Strategy before execution</h3><p>We plan the goal first, then build the content and campaigns around it.</p></div>
+<div><h3>Customized approach</h3><p>No one-size-fits-all packages. Your plan fits your brand and budget.</p></div>
+<div><h3>Creative + data</h3><p>Good ideas get sharper when reporting shows what actually works.</p></div>
+<div><h3>Transparent communication</h3><p>Clear updates and honest conversations, with no surprises.</p></div>
+<div><h3>Full-service expertise</h3><p>Social, ads, video, design, web and SEO under one roof.</p></div>
+<div><h3>Growth-focused partnership</h3><p>Your success is how we measure ours.</p></div></div></div></section>
+
+<section id="reviews"><div class="wrap"><h2>Words from<br>the people we work with.</h2>
+<p style="margin-top:20px">These are DEMO testimonials, shown only to preview the layout. They will be replaced by real client reviews.</p>
+<div class="rev"><div class="q big" tabindex="0" role="button" data-t="0"><span class="demo">DEMO</span><div class="st">★★★★★</div><p>“Sample testimonial: this is where a featured client review will appear, in large type, so visitors see it first.”</p><small>Demo Client · Demo Business</small><span class="more">Read full review ↗</span></div>
+<div class="q" tabindex="0" role="button" data-t="1"><span class="demo">DEMO</span><div class="st">★★★★★</div><p>“Sample supporting review text for layout preview only.”</p><small>Demo Name · Social media</small><span class="more">Read full review ↗</span></div>
+<div class="q" tabindex="0" role="button" data-t="2"><span class="demo">DEMO</span><div class="st">★★★★☆</div><p>“Another sample review to show how multiple reviews sit together.”</p><small>Demo Name · Google Ads</small><span class="more">Read full review ↗</span></div></div>
+<div class="row" style="margin-top:30px"><button class="btn" id="wr">Share your experience</button></div></div></section>
+
+<section class="cta"><div class="wrap"><h2>Your next move<br>starts here.</h2><p>Have a brand, business, or idea ready to grow? Let’s create something worth noticing.</p>
+<div class="row"><a class="btn" href="#contact">Start a project</a><a class="btn ghost" id="wa" href="#contact">Chat on WhatsApp</a></div></div></section>
+
+<section id="contact"><div class="wrap two"><div><h2>Let’s talk.</h2><p style="margin:24px 0">Tell us about your project and we’ll get back to you.</p>
+<a href="mailto:harshanand98355@gmail.com">harshanand98355@gmail.com</a><br>
+<a href="https://www.instagram.com/_thecompactmedia/" target="_blank" rel="noopener">Business Instagram ↗</a><br>
+<a href="https://www.instagram.com/harshanand__/" target="_blank" rel="noopener">Harsh’s Instagram ↗</a></div>
+<form id="cf" novalidate><div class="f2"><input name="n" placeholder="Name *" required autocomplete="name"><input name="e" type="email" placeholder="Email *" required autocomplete="email"></div>
+<div class="f2"><input name="p" placeholder="Phone" autocomplete="tel"><input name="b" placeholder="Business name"></div>
+<div class="f2"><select name="s"><option value="">Service interested in</option></select><select name="g"><option value="">Budget range (optional)</option><option>Under ₹25,000</option><option>₹25,000 – ₹75,000</option><option>₹75,000+</option></select></div>
+<textarea name="m" rows="5" placeholder="Message *" required></textarea><div class="msg" id="cm" role="status"></div>
+<button class="btn" type="submit">Send message</button></form></div></section>
+
+<footer><div class="wrap"><div><div class="logo">Compact<i>Media</i></div><p style="margin-top:12px">Creative, strategy and performance for brands that want to grow.</p></div>
+<div><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="#reviews">Reviews</a></div>
+<div><a href="https://www.instagram.com/_thecompactmedia/" target="_blank" rel="noopener">Business Instagram</a><a href="https://www.instagram.com/harshanand__/" target="_blank" rel="noopener">Harsh’s Instagram</a><a href="mailto:harshanand98355@gmail.com">Email</a></div>
+<div><a href="#home">Back to top ↑</a><p style="font-size:.8rem">© 2026 Compact Media</p></div></div>
+<div class="wrap"><div class="big" aria-hidden="true">COMPACT</div></div></footer>
+
+<dialog id="det" aria-label="Details"><button class="btn ghost x" id="dc" type="button">Close</button><div id="db"></div></dialog>
+<dialog id="dl"><h3 style="font-size:1.6rem;margin-bottom:16px">Share your experience</h3>
+<form id="rf" novalidate><input name="n" placeholder="Your name *" required><input name="c" placeholder="Business (optional)">
+<div class="stars" id="stars" role="group" aria-label="Rating"></div>
+<textarea name="t" rows="4" placeholder="Your review *" required></textarea>
+<label class="chk"><input type="checkbox" name="ok" required>I confirm that this review reflects my genuine experience and give Compact Media permission to display it on its website.</label>
+<div class="msg" id="rm" role="status"></div>
+<div class="row"><button class="btn" type="submit">Submit my review</button><button class="btn ghost" type="button" id="cl">Close</button></div></form></dialog>
+
+<script>
+const S=[["Social media marketing","Build an online presence that people remember."],["Paid advertising","Campaigns designed to turn attention into action."],["Video editing","Content that captures attention and keeps people watching."],["Graphic design","Visuals that give your brand a distinctive identity."],["Website development","Digital experiences that look exceptional and convert."],["Google Ads","Reach customers when they’re searching for you."],["SEO","Build sustainable visibility and organic growth."]];
+const sv=document.getElementById("sv"),sel=document.querySelector("[name=s]");
+S.forEach((s,i)=>{sv.insertAdjacentHTML("beforeend",`<button aria-expanded="false"><span>${String(i+1).padStart(2,"0")}</span><b>${s[0]}</b><em>+</em></button><div class="d"><p>${s[1]} Tell us your goal and we’ll shape a plan around it.</p></div>`);sel.add(new Option(s[0],s[0]))});
+sv.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const o=b.classList.contains("o");sv.querySelectorAll("button").forEach(x=>{x.classList.remove("o");x.setAttribute("aria-expanded","false")});if(!o){b.classList.add("o");b.setAttribute("aria-expanded","true")}});
+const P=[["Social Media","Demo social campaign","linear-gradient(135deg,#155EEF,#0a1f5c)"],["Design","Demo brand identity","linear-gradient(135deg,#62A0FF,#10182A)"],["Video","Demo reel edit","linear-gradient(160deg,#10182A,#155EEF)"],["Ads","Demo ad creative","linear-gradient(120deg,#0a1f5c,#62A0FF)"],["Web","Demo website build","linear-gradient(200deg,#155EEF,#080D1B)"],["SEO","Demo growth plan","linear-gradient(135deg,#1b2a52,#155EEF)"]];
+const fl=document.getElementById("fl"),gr=document.getElementById("gr");
+["All","Social Media","Ads","Design","Video","Web","SEO"].forEach((c,i)=>fl.insertAdjacentHTML("beforeend",`<button class="${i?"":"on"}">${c}</button>`));
+function draw(c){gr.innerHTML=P.map((p,k)=>[p,k]).filter(([p])=>c=="All"||p[0]==c).map(([p,k])=>`<a class="pj" href="#" data-k="${k}" style="--g:${p[2]}"><span class="demo">DEMO</span><div><div class="tag">${p[0]}</div><h3>${p[1]} ↗</h3></div></a>`).join("")||`<p>No projects in this category yet. <a href="#contact" style="color:var(--ele)">Start one with us.</a></p>`}
+fl.onclick=e=>{if(e.target.tagName!="BUTTON")return;fl.querySelectorAll("button").forEach(b=>b.classList.remove("on"));e.target.classList.add("on");draw(e.target.textContent)};draw("All");
+const nav=document.getElementById("nav"),lk=document.getElementById("lk"),bg=document.getElementById("bg");
+addEventListener("scroll",()=>nav.classList.toggle("s",scrollY>40));
+bg.onclick=()=>{const o=lk.classList.toggle("open");bg.setAttribute("aria-expanded",o)};lk.onclick=e=>{if(e.target.tagName=="A")lk.classList.remove("open")};
+const io=new IntersectionObserver(es=>es.forEach(x=>x.isIntersecting&&x.target.classList.add("in")),{threshold:.2});document.querySelectorAll(".rv").forEach(x=>io.observe(x));
+const ids=["home","services","work","about","reviews"],ls=[...lk.querySelectorAll("a:not(.btn)")];
+new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)ls.forEach((a,i)=>a.classList.toggle("on",ids[i]==x.target.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe&&ids.forEach(i=>{});
+const so=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)ls.forEach(a=>a.classList.toggle("on",a.hash=="#"+x.target.id))}),{rootMargin:"-45% 0px -50% 0px"});ids.forEach(i=>so.observe(document.getElementById(i)));
+const ok=(el,t,c)=>{el.className="msg "+c;el.textContent=t};
+document.getElementById("cf").onsubmit=e=>{e.preventDefault();const f=e.target,m=document.getElementById("cm");
+if(!f.n.value.trim()||!/^\S+@\S+\.\S+$/.test(f.e.value)||f.m.value.trim().length<10)return ok(m,"Please add your name, a valid email and a message of at least 10 characters.","er");
+const body=`Name: ${f.n.value}\nEmail: ${f.e.value}\nPhone: ${f.p.value}\nBusiness: ${f.b.value}\nService: ${f.s.value}\nBudget: ${f.g.value}\n\n${f.m.value}`;
+location.href="mailto:harshanand98355@gmail.com?subject="+encodeURIComponent("New project inquiry")+"&body="+encodeURIComponent(body);ok(m,"Opening your email app to send this. Thank you!","ok")};
+const det=document.getElementById("det"),db=document.getElementById("db");
+const T=[[5,"Demo Client","Demo Business","Social media marketing","Sample full review text. In the live site this shows the complete review exactly as the client wrote it, including everything that is shortened on the homepage card."],[5,"Demo Name","Demo Business","Social media marketing","Sample full review text for layout preview only. Real client reviews will replace this once approved."],[4,"Demo Name","Demo Business","Google Ads","Another sample full review to preview the detail view. No real client said this."]];
+const PH="Demo placeholder. Real project details will be written here by Compact Media.";
+function showP(k){const p=P[k];db.innerHTML=`<div class="tag">${p[0]} · DEMO</div><h3>${p[1]}</h3><div class="gal"><i style="background:${p[2]}"></i><i style="background:${p[2]};opacity:.7"></i><i style="background:${p[2]};opacity:.45"></i></div><h4>Client</h4><p>Demo client</p><h4>Challenge</h4><p>${PH}</p><h4>Strategy</h4><p>${PH}</p><h4>Execution</h4><p>${PH}</p><h4>Outcome</h4><p>Results are only shown when real, verified data exists.</p><p style="margin-top:26px"><a class="btn" href="#contact" id="dgo">Start a similar project</a></p>`;det.showModal()}
+function showT(i){const t=T[i];db.innerHTML=`<div class="tag">Client review · DEMO</div><div class="st" style="margin-top:14px">${"★".repeat(t[0])}${"☆".repeat(5-t[0])}</div><h3 style="font-size:1.5rem;line-height:1.3;letter-spacing:-.01em">“${t[4]}”</h3><h4>${t[1]}</h4><p>${t[2]} · ${t[3]} · Demo date</p>`;det.showModal()}
+gr.addEventListener("click",e=>{const a=e.target.closest(".pj");if(a){e.preventDefault();showP(+a.dataset.k)}});
+document.querySelectorAll(".q[data-t]").forEach(q=>{q.onclick=()=>showT(+q.dataset.t);q.onkeydown=e=>{if(e.key=="Enter"||e.key==" "){e.preventDefault();showT(+q.dataset.t)}}});
+document.getElementById("dc").onclick=()=>det.close();db.addEventListener("click",e=>{if(e.target.id=="dgo")det.close()});
+const dl=document.getElementById("dl"),st=document.getElementById("stars");let r=0;
+for(let i=1;i<=5;i++)st.insertAdjacentHTML("beforeend",`<button type="button" aria-label="${i} stars">★</button>`);
+st.onclick=e=>{const b=e.target.closest("button");if(!b)return;r=[...st.children].indexOf(b)+1;[...st.children].forEach((x,i)=>x.classList.toggle("on",i<r))};
+document.getElementById("wr").onclick=()=>dl.showModal();document.getElementById("cl").onclick=()=>dl.close();
+document.getElementById("rf").onsubmit=e=>{e.preventDefault();const f=e.target,m=document.getElementById("rm");
+if(!f.n.value.trim()||!r||f.t.value.trim().length<10||!f.ok.checked)return ok(m,"Please add your name, a star rating, a review and tick the consent box.","er");
+ok(m,"Thank you for sharing your experience with Compact Media! Your review has been submitted and will appear on the website after it has been reviewed. (Demo: not saved yet.)","ok");f.reset();r=0;[...st.children].forEach(x=>x.classList.remove("on"))};
+</script></body></html>
